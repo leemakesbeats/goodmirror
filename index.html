@@ -22,28 +22,44 @@
       display:flex;
       align-items:center;
       justify-content:center;
+      min-height:100vh;
+      position:relative;
       -webkit-font-smoothing:antialiased;
     }
     main {
       text-align:center;
       padding:40px 16px;
-      margin-top:-200px;
+      position:fixed;
+      top:50%;
+      left:50%;
+      transform:translate(-50%,-50%);
+      width:100%;
+      max-width:1200px;
+      box-sizing:border-box;
     }
     .logo {
       width:min(1120px,95vw);
       max-width:100%;
       height:auto;
-      margin-bottom:60px;
+      margin-bottom:0;
       display:block;
       margin-left:auto;
       margin-right:auto;
+      position:absolute;
+      top:50%;
+      left:50%;
+      transform:translate(-50%,-50%);
     }
     nav {
       display:flex;
       justify-content:center;
       flex-wrap:wrap;
       gap:min(8vw,60px);
-      margin-top:-250px;
+      position:absolute;
+      top:calc(50% + clamp(100px,15vw,150px));
+      left:50%;
+      transform:translateX(-50%);
+      width:100%;
     }
     nav a {
       color:var(--ink);
