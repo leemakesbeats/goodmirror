@@ -27,13 +27,13 @@
     main {
       text-align:center;
       padding:40px 16px;
-      margin-top:clamp(-250px,-20vh,-200px);
+      margin-top:-200px;
     }
     .logo {
       width:min(1120px,95vw);
       max-width:100%;
       height:auto;
-      margin-bottom:clamp(30px,6vw,60px);
+      margin-bottom:60px;
       display:block;
       margin-left:auto;
       margin-right:auto;
@@ -42,25 +42,25 @@
       display:flex;
       justify-content:center;
       flex-wrap:wrap;
-      gap:clamp(20px,8vw,60px);
-      margin-top:clamp(-350px,-25vh,-250px);
+      gap:min(8vw,60px);
+      margin-top:-250px;
     }
     nav a {
       color:var(--ink);
       text-decoration:none;
-      font-size:clamp(14px,4vw,18px);
+      font-size:clamp(16px,1.4vw,18px);
       position:relative;
     }
     @media (max-width:768px) {
       main {
-        margin-top:clamp(-150px,-15vh,-100px);
+        transform:scale(0.65);
+        transform-origin:center center;
       }
-      .logo {
-        margin-bottom:clamp(20px,5vw,40px);
-      }
-      nav {
-        margin-top:clamp(-200px,-20vh,-150px);
-        gap:clamp(15px,6vw,30px);
+    }
+    @media (max-width:480px) {
+      main {
+        transform:scale(0.5);
+        transform-origin:center center;
       }
     }
     nav a::after {
